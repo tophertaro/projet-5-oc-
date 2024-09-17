@@ -1,7 +1,9 @@
 import Header from "../components/Header.jsx";
 import Banner from "../components/Banner.jsx";
+import Footer from "../components/Footer.jsx";
 
 import logo from '../assets/logo.svg'
+import logoFooter from '../assets/logo-footer.svg'
 import bannerImg from '../assets/banner.svg'
 
 function HomePage() {
@@ -15,6 +17,8 @@ function HomePage() {
     <>
       <Header logo={logo} links={navLinks}/>
       <Banner bannerImg={bannerImg} bannerText='Chez vous, partout et ailleurs' />
+      <Footer logo={logoFooter}/>
+      
     </>
   )
 }
