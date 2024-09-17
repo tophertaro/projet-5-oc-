@@ -1,0 +1,25 @@
+// HEADER
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 50px;
+
+  .navlink {
+    ul {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    li {
+      margin-left: 50px;
+    }
+    a {
+      text-decoration: none;
+      color: black;
+    }
+  }
+}
+

@@ -6,7 +6,7 @@ import Logements from './pages/Logements.jsx'
 import About from './pages/A-propos.jsx'
 import Error from './pages/Erreur.jsx'
 
-import '../src/styles/App.css'
+import '../src/styles/App.scss'
 
 
 function App() {
