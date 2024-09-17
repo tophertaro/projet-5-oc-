@@ -1,6 +1,8 @@
 import Header from "../components/Header.jsx";
-import logo from '../assets/logo.svg'
 import Banner from "../components/Banner.jsx";
+
+import logo from '../assets/logo.svg'
+import bannerImg from '../assets/banner.svg'
 
 function HomePage() {
 
@@ -12,6 +14,7 @@ function HomePage() {
   return(
     <>
       <Header logo={logo} links={navLinks}/>
+      <Banner bannerImg={bannerImg} bannerText='Chez vous, partout et ailleurs' />
     </>
   )
 }
