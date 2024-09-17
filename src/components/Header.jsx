@@ -1,8 +1,7 @@
-import logo from '../assets/logo.svg'
 
 
 
-function Header() {
+function Header({logo, links}) {
   return(
     <header className='header'>
       <div>
@@ -10,8 +9,9 @@ function Header() {
       </div>
       <nav className='navlink'>
         <ul>
-          <li><a href="#">Accueil</a></li>
-          <li><a href="#">A Propos</a></li>
+          {links.map((link, index) => (
+            <li key={index}><a href={link.href}>{link.label}</a></li>
+          ))}
         </ul>
       </nav>
     </header>

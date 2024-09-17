@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 
-import HomePage from './pages/Home-page.jsx'
+import HomePage from './pages/Homepage.jsx'
 import Logements from './pages/Logements.jsx'
 import About from './pages/A-propos.jsx'
 import Error from './pages/Erreur.jsx'
