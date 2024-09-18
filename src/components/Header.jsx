@@ -1,3 +1,4 @@
+import {NavLink} from 'react-router-dom'
 
 function Header({logo, links}) {
   return(
@@ -8,7 +9,7 @@ function Header({logo, links}) {
       <nav className='navlink'>
         <ul>
           {links.map((link, index) => (
-            <li key={index}><a href={link.href}>{link.label}</a></li>
+            <li key={index}><NavLink to={link.href}>{link.label}</NavLink></li>
           ))}
         </ul>
       </nav>
