@@ -9,9 +9,6 @@ import bannerImg from '../assets/banner.svg'
 
 
 function HomePage() {
-
-  
-
   return(
     <>
       <Banner bannerImg={bannerImg} bannerText='Chez vous, partout et ailleurs' />
