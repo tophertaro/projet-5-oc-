@@ -124,3 +124,40 @@ body {
   align-items: center;
   padding-top: 30px;
 }
+
+// COLLAPSE
+
+.collapse-container {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
+
+  .collapse-elements {
+    background-color: #FF6060;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  .collapse-elements:hover {
+    background-color: darken(#FF6060, 8%); 
+  }
+
+  .collapse-title {
+    font-size: 1.1em;
+  }
+
+  .collapse-arrow img {
+    width: 15px;
+    height: 15px;
+  }
+
+  .collapse-text {
+    padding: 15px 15px 30px 15px;
+  }
+}
