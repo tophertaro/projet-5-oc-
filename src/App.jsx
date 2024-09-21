@@ -7,7 +7,7 @@ import logoFooter from './assets/logo-footer.svg'
 import HomePage from './pages/Homepage.jsx'
 import Accomodations from './pages/Accomodations.jsx'
 import About from './pages/About.jsx'
-import Error from './pages/Error.jsx'
+import ErrorPage from './pages/ErrorPage.jsx'
 import Header from "./components/Header.jsx"
 import Footer from "./components/Footer.jsx"
 
@@ -27,7 +27,7 @@ function App() {
         <Route path='/'  element={<HomePage />}/>
         <Route path='/accomodations'  element={<Accomodations/>}/>
         <Route path='/about'  element={<About />}/>
-        <Route path='*'  element={<Error/>}/>
+        <Route path='*'  element={<ErrorPage />}/>
       </Routes>
       <Footer logo={logoFooter}/>
     </>
