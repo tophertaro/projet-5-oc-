@@ -25,7 +25,7 @@ function App() {
       <Header logo={logo} links={navLinks}/>
       <Routes>
         <Route path='/'  element={<HomePage />}/>
-        <Route path='/accomodations'  element={<Accomodations/>}/>
+        <Route path='/accomodations/:id'  element={<Accomodations/>}/>
         <Route path='/about'  element={<About />}/>
         <Route path='*'  element={<ErrorPage />}/>
       </Routes>

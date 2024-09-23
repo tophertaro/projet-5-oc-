@@ -1,8 +1,10 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+import logements from "../../datas/logements.json";
 
 import Banner from "../components/Banner.jsx";
 import Cards from "../components/Cards.jsx";
-
-
 
 import bannerImg from '../assets/banner.svg'
 
