@@ -18,12 +18,22 @@ function Carrousel({pictures}) {
 
   return(
     <div className="carousel-container">
-      <button className="left-arrow" onClick={previousSlide}>&lt;</button>
-      <img className="carousel-img" src={pictures[currentSlide]} alt={`Slide ${currentSlide + 1}`}  />
-      <button className="right-arrow" onClick={nextSlide}>&gt;</button>
-      <span className="carousel-counter">{currentSlide + 1}/{pictures.length}</span>
+      <img className="carousel-img" src={pictures[currentSlide]} alt="carousel" />
+      
+      {pictures.length > 1 && (
+        <>
+          <button className="left-arrow" onClick={previousSlide}>‹</button>
+          <button className="right-arrow" onClick={nextSlide}>›</button>
+        </>
+      )}
+      
+      {pictures.length > 1 && (
+        <div className="carousel-counter">
+          {currentSlide + 1}/{pictures.length}
+        </div>
+      )}
     </div>
-  )
+  );
 }
 
 export default Carrousel;
