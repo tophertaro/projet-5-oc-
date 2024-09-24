@@ -6,7 +6,7 @@ import ArrowDown from '../assets/arrow-opened.svg'
 
 
 
-function Collapse({title, text}) {
+function Collapse({title, text, page}) {
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -15,7 +15,7 @@ function Collapse({title, text}) {
   };
 
   return(
-    <div className='collapse-container'>
+    <div className={`collapse-container ${page === "accomodations" ? "logement-style" : ""}`}>
       <div className='collapse-elements' onClick={openCollapse}>
         <div className='collapse-title'>{title}</div>
         <div className='collapse-arrow'>

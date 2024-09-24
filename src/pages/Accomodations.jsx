@@ -17,7 +17,6 @@ function Accomodations() {
   const logement = logements.find(item => item.id === id);
 
 
-  console.log(logement.pictures)
   return(
     <AccomodationLayout 
     carousel={<Carrousel pictures={logement.pictures} />}
@@ -27,7 +26,7 @@ function Accomodations() {
     rating={<Rating rating={logement.rating} />}
 
     details={
-      <div>
+      <div className="collapse-accomodation">
         <Collapse title='Description' text={logement.description} />
         <Collapse
           title='Équipements'

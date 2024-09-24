@@ -16,6 +16,7 @@ function AccomodationLayout({carousel, info, hostInfo, tags, rating, details}) {
         <div className="rating">{rating}</div>
       </div>
       
+      
       <div className="details">{details}</div>
     </div>
   )

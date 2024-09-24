@@ -3,6 +3,7 @@ import React from "react";
 function Rating ({rating}) {
 
   const totalStars = 5;
+  
 
   return (
     <div className="rating">

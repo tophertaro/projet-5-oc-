@@ -6,6 +6,10 @@ body {
   margin: 0;
 }
 
+.active {
+  border-bottom: 1px solid black;
+}
+
 // HEADER
 
 .header {
@@ -333,8 +337,7 @@ body {
 
   .host-info {
     display: flex;
-
-    margin-right: 20px;
+    margin-right: 25px;
 
     p {
       display: flex;
@@ -352,7 +355,54 @@ body {
   }
 }
 
+// TAG & RATING
 
+.tag-and-rating {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 20px;
+
+  .tags {
+    display: flex;
+    gap: 10px;
+    margin-left: 25px;
+
+    .tag {
+      background-color: #FF6060;
+      color: white;
+      padding: 6px 20px;
+      border-radius: 15px;
+    }
+  }
+
+  .rating {
+    display: flex;
+    gap: 5px;
+    margin-right: 25px;
+
+    .star {
+      font-size: 1.5rem;
+      color: #E3E3E3;
+    }
+
+    .filled {
+      color: #FF6060;
+    }
+  }
+}
+
+
+// COLLAPSE LOGEMENTS
+
+.collapse-accomodation {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+
+  .collapse-container {
+    width: 40%;
+  }
+}
 
 
 
