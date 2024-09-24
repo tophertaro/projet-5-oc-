@@ -17,11 +17,11 @@ function Carrousel({pictures}) {
   };
 
   return(
-    <div>
-      <button onClick={previousSlide}>&lt;</button>
-      <img src={pictures[currentSlide]} alt={`Slide ${currentSlide + 1}`}  />
-      <button onClick={nextSlide}>&gt;</button>
-      <span>{currentSlide + 1}/{pictures.length}</span>
+    <div className="carousel-container">
+      <button className="left-arrow" onClick={previousSlide}>&lt;</button>
+      <img className="carousel-img" src={pictures[currentSlide]} alt={`Slide ${currentSlide + 1}`}  />
+      <button className="right-arrow" onClick={nextSlide}>&gt;</button>
+      <span className="carousel-counter">{currentSlide + 1}/{pictures.length}</span>
     </div>
   )
 }
