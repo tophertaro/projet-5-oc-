@@ -258,154 +258,198 @@ body {
 
 // CAROUSEL
 
-.carousel-container {
-  position: relative;
-  width: 90%;
-  margin: 0 auto;
-  height: 450px;
+  .carousel-container {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    height: 450px;
+  
+    .carousel-img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+    }
+  
+    .left-arrow, .right-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      border: none;
+      font-size: 8rem;
+      color: white;
+      background-color: transparent;
+      transition: color 0.3 ease;
+      z-index: 10;
+      cursor: pointer;
+  
+      &:hover {
+        color: #FF6060;
+      }
+    }
+  
+    .left-arrow {
+      left: 10px;
+    }
+  
+    .right-arrow {
+      right: 10px;
+    }
+  
+    .carousel-counter {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      color: white;
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 8px;
+      border-radius: 6px;
+    }
 
-  .carousel-img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 20px;
+    @media (max-width: 768px) {
+      height: auto;
+
+      .left-arrow, .right-arrow {
+        font-size: 2rem;
+      }
+
+      .carousel-counter {
+        display: none;
+      }
+    }
   }
+  
+// LOCATION INFO & TAGS
+  
+.location-host-section {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px auto;
+  width: 90%;
 
-  .left-arrow, .right-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    border: none;
-    font-size: 8rem;
-    color: white;
-    background-color: transparent;
-    transition: color 0.3 ease;
-    z-index: 10;
-    cursor: pointer;
+  .info-section {
+    .info {
+      h1 {
+        font-size: 2rem;
+        color: #FF6060;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
 
-    &:hover {
-      color: #FF6060;
+      .location {
+        font-size: 1.2rem;
+        margin-top: 0;
+      }
+    }
+
+    .tags {
+      display: flex;
+      gap: 10px;
+
+      .tag {
+        background-color: #FF6060;
+        color: white;
+        padding: 6px 20px;
+        border-radius: 15px;
+      }
     }
   }
 
-  .left-arrow {
-    left: 10px;
-  }
+  .host-info-section {
+    display: flex;
+    flex-direction: column;
+  
 
-  .right-arrow {
-    right: 10px;
-  }
+    .host-info {
+      display: flex;
+      margin-top: 10px;
 
-  .carousel-counter {
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 8px;
-    border-radius: 6px;
+      p {
+        color: #FF6060;
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        margin-right: 10px;
+      }
+
+      .host-picture {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+      }
+    }
+
+    .rating {
+      display: flex;
+      gap: 5px;
+      margin-top: 10px;
+
+      .star {
+        font-size: 1.5rem;
+        color: #E3E3E3;
+      }
+
+      .filled {
+        color: #FF6060;
+      }
+    }
   }
 }
 
-// INFO & HOST
-
-.info-and-host {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 20px;
-
-  .info {
-
-    margin-left: 25px;
+@media (max-width: 768px) {
+  .location-host-section {
+    flex-direction: column; 
 
     h1 {
-      font-size: 2rem;
-      color: #FF6060;
-      font-weight: 500;
-      margin-bottom: 5px;
-      
-    }
-
-    .location {
-      font-size: 1.2rem;
-      margin-top: 0;
-    }
-
-    
-  }
-
-  .host-info {
-    display: flex;
-    margin-right: 25px;
-
-    p {
-      display: flex;
-      color: #FF6060;
-      margin-right: 10px;
-      font-size: 1.3rem;
-    }
-
-    .host-picture {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
-    }
-  }
-}
-
-// TAG & RATING
-
-.tag-and-rating {
-  display: flex;
-  justify-content: space-between;
-  margin: 20px 20px;
-
-  .tags {
-    display: flex;
-    gap: 10px;
-    margin-left: 25px;
+        margin-top: 0;
+      };
 
     .tag {
-      background-color: #FF6060;
-      color: white;
-      padding: 6px 20px;
-      border-radius: 15px;
+      font-size: 0.8rem;
+    }  
+
+  .host-info-section {
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+
+    .host-info {
+      p {
+        font-size: 1rem;
+      }
+
+      .host-picture {
+        width: 60px;
+        height: 60px;
+      }
     }
   }
+  }
+}
 
-  .rating {
+  // COLLAPSE LOGEMENTS
+  
+  .collapse-accomodation {
     display: flex;
-    gap: 5px;
-    margin-right: 25px;
-
-    .star {
-      font-size: 1.5rem;
-      color: #E3E3E3;
+    justify-content: space-between;
+    gap: 20px;
+  
+    .collapse-container {
+      width: 40%;
     }
 
-    .filled {
-      color: #FF6060;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap:0px;
+
+      .collapse-container {
+        width: 90%;
+      }
+
     }
   }
-}
 
-
-// COLLAPSE LOGEMENTS
-
-.collapse-accomodation {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-
-  .collapse-container {
-    width: 40%;
-  }
-}
-
-
-
-
+ 
 
 

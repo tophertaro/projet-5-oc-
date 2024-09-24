@@ -6,15 +6,20 @@ function AccomodationLayout({carousel, info, hostInfo, tags, rating, details}) {
 
       <div className="carousel">{carousel}</div>
 
-      <div className="info-and-host">
-        <div className="info">{info}</div>
-        <div className="host-info">{hostInfo}</div>
-      </div>
+      <section className="location-host-section">
+        <div className="info-section">
+          <div className="info">{info}</div>
+          <div className="tags">{tags}</div>
+        </div>
 
-      <div className="tag-and-rating">
-        <div className="tags">{tags}</div>
-        <div className="rating">{rating}</div>
-      </div>
+        <div className="host-info-section">
+          <div className="host-info">{hostInfo}</div>
+          <div className="rating">{rating}</div>
+        </div>
+      </section>
+      
+      
+      
       
       
       <div className="details">{details}</div>
