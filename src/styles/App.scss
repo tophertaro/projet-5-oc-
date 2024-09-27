@@ -2,8 +2,22 @@
   font-family: 'Montserrat', sans-serif;
 }
 
-body {
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+html, body {
   margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .active {
@@ -165,13 +179,16 @@ body {
 // FOOTER
 .footer {
   background-color: #000;
-  margin-top: 30px;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 30px;
+  margin-top: auto;
+  padding: 1.5rem;
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+  }
 
   @media (max-width: 768px) {
     margin-top: 10px;

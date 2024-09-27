@@ -21,7 +21,7 @@ const navLinks = [
 function App() {
 
   return (
-    <>
+    <div className='app'>
       <Header logo={logo} links={navLinks}/>
       <Routes>
         <Route path='/'  element={<HomePage />}/>
@@ -30,7 +30,7 @@ function App() {
         <Route path='*'  element={<ErrorPage />}/>
       </Routes>
       <Footer logo={logoFooter}/>
-    </>
+    </div>
     
   )
 }
