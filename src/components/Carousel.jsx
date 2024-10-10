@@ -9,11 +9,11 @@ function Carrousel({pictures}) {
 
   const nextSlide = () => {
     setCurrentSlide((prevSlide) =>
-    prevSlide === pictures.length - 1 ? 0 : prevSlide + 1);
+    prevSlide === pictures.length - 1 ? 0 : prevSlide + 1); // si img actuelle = dernier index alors on remet sur le premier sinon on +
   };
   const previousSlide = () => {
     setCurrentSlide((prevSlide) => 
-    prevSlide === 0 ? pictures.length - 1 : prevSlide - 1);
+    prevSlide === 0 ? pictures.length - 1 : prevSlide - 1); // si img actuelle = dernier index alors on remet sur le premier sinon on -
   };
 
   return(

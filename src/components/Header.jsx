@@ -1,4 +1,4 @@
-import {NavLink} from 'react-router-dom'
+import {NavLink} from 'react-router-dom' // fonctionne comme une balise a, mais il y'a une classe active en +
 
 function Header({logo, links}) {
   return(

@@ -1,5 +1,5 @@
 import React from "react";
-import {useParams} from 'react-router-dom'
+import {useParams} from 'react-router-dom' // hook permettant d'extraire parametre de l'url
 
 import logements from "../../datas/logements.json";
 
@@ -12,9 +12,9 @@ import Rating from "../components/Ratings";
 import Collapse from "../components/Collapse";
 
 function Accomodations() {
-  const {id} = useParams();
+  const {id} = useParams(); // extrait l'id depuis l'url
   
-  const logement = logements.find(item => item.id === id);
+  const logement = logements.find(item => item.id === id); // méthode find permettant de trouver le logement correspondant à l'id extrait et renvoie les infos du logement
 
 
   return(

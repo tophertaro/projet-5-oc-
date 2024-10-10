@@ -1,12 +1,12 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom"; // permet de naviguer entre différentes pages
 
 import logements from "../../datas/logements.json";
 
 function Cards() {
   const navigate = useNavigate();
 
-  const handleCardClick = (id) => {
+  const handleCardClick = (id) => { // au clic, redirige vers la page logement correspondante
     navigate(`/accomodations/${id}`);
   }
 
